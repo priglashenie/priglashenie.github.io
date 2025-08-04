@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Приглашение на свадьбу Ильи и Анны</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.inner-line {
+  position: absolute;
+  width: 98%;
+  height: 98%;
+  margin: 1%;
+  border-radius: 50px;
+  border: 1px solid #bfbfbf;
+  overflow: hidden;
+  box-shadow: 0 0 10px 0 #bbbbbb;
+}
+.main {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+  position: relative;
+}
+.title, .text, .subtext {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.title {
+  margin: 50px 0;
+}
+.text {
+  margin: 150px 0;
+  text-align: center;
+}
+.subtext {
+  margin: 30px 0;
+}
+h1 {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10rem;
+  text-align: center;
+}
+p {
+  font-family: "Cormorant Infant", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 2.5rem;
+}
+span {
+  font-family: "Amatic SC", sans-serif;
+  font-family: "Cormorant Infant", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5rem;
+  font-size: 1.75rem;
+}
+.y-map iframe {
+    position: absolute;
+    bottom: 0;
+    bottom: -85px;
+}
+
+@media screen and (max-width: 1000px) {
+  .title {
+    margin: 50px 0 0;
+  }
+  h1 {
+    font-size: 4.5rem;
+    line-height: 5rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  span {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+  .text {
+    margin: 50px 10px;
+    width: auto;
+  }
+  .y-map iframe {
+    bottom: -85px;
+  }
+}
+
+</style>
+<body>
+<div class="main">
+  <div class="inner-line">
+  
+  <div class="title">
+    <h1>Свадьба Ильи&nbsp;и&nbsp;Анны</h1>
+  </div>
+  <div class="text">
+    <p>
+      Церемония бракосочетания состоится <b style="font-weight: 700;">6&nbsp;сентября&nbsp;в&nbsp;15:30</b>
+    </p>
+  </div>
+  <div class="subtext">
+    <span>
+      ул. Мартирия Соловьёва, 16, Шуя
+    </span>
+  </div>
+  <div class="y-map">
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af5a9e3b2b1aab2e5eabe86413b2f1ad29aeada3218176302b3f08a93d79f6c3b&amp;width=100%25&amp;height=300&amp;lang=ru_RU&amp;scroll=true"></script>
+  </div>
+  
+  </div>
+</div>
+</body>
+</html>
