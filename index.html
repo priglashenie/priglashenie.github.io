@@ -23,6 +23,8 @@
   border: 1px solid #bfbfbf;
   overflow: hidden;
   box-shadow: 0 0 10px 0 #bbbbbb;
+  display: flex;
+  flex-flow: column;
 }
 .main {
   width: 100%;
@@ -31,6 +33,8 @@
   display: flex;
   flex-flow: column;
   position: relative;
+  justify-content: center;
+  align-items: center;
 }
 .title, .text, .subtext {
   width: 100%;
@@ -39,20 +43,26 @@
 }
 .title {
   margin: 50px 0;
+  margin: 0;
 }
 .text {
-  margin: 150px 0;
+  margin: 50px 0;
+  margin: 0;
   text-align: center;
 }
 .subtext {
-  margin: 30px 0;
+  margin: 50px 0;
+  margin: 0;
 }
-h1 {
+h1, h2 {
   font-family: "Great Vibes", cursive;
   font-weight: 400;
   font-style: normal;
   font-size: 10rem;
   text-align: center;
+}
+h2 {
+  font-size: 7.5rem;
 }
 p {
   font-family: "Cormorant Infant", serif;
@@ -69,10 +79,17 @@ span {
   font-size: 2.5rem;
   font-size: 1.75rem;
 }
-.y-map iframe {
-    position: absolute;
-    bottom: 0;
-    bottom: -85px;
+.divided {
+  display: flex;
+}
+.divided span {
+  width: fit-content;
+  display: block;
+  padding: 0 30px;
+}
+.divided span:first-child {
+  border-right: 1px solid black;
+  text-align: right;
 }
 
 @media screen and (max-width: 1000px) {
@@ -94,9 +111,6 @@ span {
     margin: 50px 10px;
     width: auto;
   }
-  .y-map iframe {
-    bottom: -85px;
-  }
 }
 
 </style>
@@ -104,24 +118,41 @@ span {
 <div class="main">
   <div class="inner-line">
   
-  <div class="title">
-    <h1>Свадьба Ильи&nbsp;и&nbsp;Анны</h1>
-  </div>
-  <div class="text">
-    <p>
-      Церемония бракосочетания состоится <b style="font-weight: 700;">6&nbsp;сентября&nbsp;в&nbsp;15:30</b>
-    </p>
-  </div>
-  <div class="subtext">
-    <span>
-      ул. Мартирия Соловьёва, 16, Шуя
-    </span>
-  </div>
-  <div class="y-map">
-    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af5a9e3b2b1aab2e5eabe86413b2f1ad29aeada3218176302b3f08a93d79f6c3b&amp;width=100%25&amp;height=300&amp;lang=ru_RU&amp;scroll=true"></script>
-  </div>
+    <div class="text">
+      <p>
+        ДОРОГИЕ ГОСТИ
+      </p>
+    </div>
+    <div class="subtext">
+      <span>
+        приглашаем вас разделить с нами день нашей свадьбы
+      </span>
+    </div>
+    <div class="title">
+      <h2>06.09.2025</h2>
+    </div>
+    <div class="subtext">
+      <div class="divided">
+        <span>
+          Торжественное церемония в 15:30<br>
+          Филиал ЗАГС<br>
+          г.Шуя, ул. Мартирия Соловьёва, 16<br>
+        </span>
+        <span>
+          Праздничный ужин в 18:00<br>
+          Ресторан "Крепость"<br>
+          г.Шуя, ул. Кооперативная, 2Б<br>
+        </span>
+      </div>
+    </div>
+    <div class="title">
+      <h1>Илья&nbsp;и&nbsp;Анна</h1>
+    </div>
   
   </div>
 </div>
 </body>
 </html>
+<script>
+
+</script>
