@@ -25,6 +25,7 @@
   justify-content: center;
   align-items: center;
   background-image: url(heart.jpg);
+  background-image: url(starheart.jpg);
   background-size: cover;
   color: #FFF;
 }
@@ -36,10 +37,14 @@
   border-radius: 50px;
   overflow: hidden;
   box-shadow: 0 0 20px 2px #ffc0c0;
+  box-shadow: 0 0 20px 2px #ff06d63d;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
   background-color: #0011ff94;
+  background-color: #c000ff80;
+  text-shadow: unset;
+  text-shadow: 0 0 9px #00ff16;
 }
 .title, .text, .subtext {
   width: 100%;
@@ -162,8 +167,7 @@ span {
 </div>
 </body>
 </html>
-<script>
+<noscript>
   let name = window.$_GET = location.search.substr(1).split("&").reduce((o,i)=>(u=decodeURIComponent,[k,v]=i.split("="),o[u(k)]=v&&u(v),o),{});
   document.getElementById('who').innerHTML = "Дорогие "+name.invite;
-  console.log(name);
-</script>
+</noscript>
