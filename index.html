@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Приглашение на свадьбу Ильи и Анны</title>
+  <link rel="icon" type="image/x-icon" href="rings.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&family=Great+Vibes&display=swap" rel="stylesheet">
@@ -14,18 +15,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-.inner-line {
-  position: absolute;
-  width: 98%;
-  height: 98%;
-  margin: 1%;
-  border-radius: 50px;
-  border: 1px solid #bfbfbf;
-  overflow: hidden;
-  box-shadow: 0 0 10px 0 #bbbbbb;
-  display: flex;
-  flex-flow: column;
-}
 .main {
   width: 100%;
   height: 100vh;
@@ -35,6 +24,22 @@
   position: relative;
   justify-content: center;
   align-items: center;
+  background-image: url(heart.jpg);
+  background-size: cover;
+  color: #FFF;
+}
+.inner-line {
+  position: absolute;
+  width: 55%;
+  height: 75%;
+  margin: 1%;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 0 20px 2px #ffc0c0;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  background-color: #0011ff94;
 }
 .title, .text, .subtext {
   width: 100%;
@@ -54,6 +59,9 @@
   margin: 50px 0;
   margin: 0;
 }
+.who {
+  margin-top: 70px;
+}
 h1, h2 {
   font-family: "Great Vibes", cursive;
   font-weight: 400;
@@ -62,7 +70,8 @@ h1, h2 {
   text-align: center;
 }
 h2 {
-  font-size: 7.5rem;
+  font-size: 5rem;
+  font-family: "Cormorant Infant", serif;
 }
 p {
   font-family: "Cormorant Infant", serif;
@@ -88,7 +97,7 @@ span {
   padding: 0 30px;
 }
 .divided span:first-child {
-  border-right: 1px solid black;
+  border-right: 1px solid #FFF;
   text-align: right;
 }
 
@@ -119,8 +128,8 @@ span {
   <div class="inner-line">
   
     <div class="text">
-      <p>
-        ДОРОГИЕ ГОСТИ
+      <p class="who" id="who">
+        Дорогие гости
       </p>
     </div>
     <div class="subtext">
@@ -128,7 +137,7 @@ span {
         приглашаем вас разделить с нами день нашей свадьбы
       </span>
     </div>
-    <div class="title">
+    <div class="subtext">
       <h2>06.09.2025</h2>
     </div>
     <div class="subtext">
@@ -154,5 +163,7 @@ span {
 </body>
 </html>
 <script>
-
+  let name = window.$_GET = location.search.substr(1).split("&").reduce((o,i)=>(u=decodeURIComponent,[k,v]=i.split("="),o[u(k)]=v&&u(v),o),{});
+  document.getElementById('who').innerHTML = "Дорогие "+name.invite;
+  console.log(name);
 </script>
