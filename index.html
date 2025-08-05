@@ -7,7 +7,7 @@
   <link rel="icon" type="image/x-icon" href="rings.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&family=Great+Vibes&family=Poiret+One&display=swap" rel="stylesheet">
 </head>
 <style>
 * {
@@ -26,27 +26,32 @@
   align-items: center;
   background-image: url(starheart.jpg);
   background-size: cover;
+  background-position: center;
   filter: hue-rotate(255deg);
   color: #FFF;
 }
 .inner-line {
   position: absolute;
-  width: 55%;
-  height: 75%;
-  margin: 1%;
+  width: 100%;
+  max-width: 1000px;
+  height: 100%;
+  max-height: 800px;
   border-radius: 50px;
   overflow: hidden;
-  box-shadow: 0 0 20px 2px #ffc0c0;
-  box-shadow: 0 0 20px 2px #ff06d63d;
+  box-shadow: 0 0 10px 0px #000000bb;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  background-color: #0011ff94;
-  background-color: #c000ff80;
   background-color: #04ffce54;
-  text-shadow: unset;
-  text-shadow: 0 0 9px #00ff16;
-  text-shadow: 0 0 9px #000000;
+  text-shadow: 0 0 7px #000000;
+  animation-name: chameleon;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+@keyframes chameleon {
+  0%   {filter: hue-rotate(0deg);}
+  50%  {filter: hue-rotate(40deg);}
+  100% {filter: hue-rotate(0deg);}
 }
 .title, .text, .subtext {
   width: 100%;
@@ -54,20 +59,18 @@
   justify-content: center;
 }
 .title {
-  margin: 50px 0;
-  margin: 0;
+
 }
 .text {
-  margin: 50px 0;
-  margin: 0;
   text-align: center;
 }
 .subtext {
-  margin: 50px 0;
-  margin: 0;
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
 }
 .who {
-  margin-top: 70px;
+  margin-top: 50px;
 }
 h1, h2 {
   font-family: "Great Vibes", cursive;
@@ -79,21 +82,23 @@ h1, h2 {
 h2 {
   font-size: 5rem;
   font-family: "Cormorant Infant", serif;
+  font-weight: 700;
 }
 p {
   font-family: "Cormorant Infant", serif;
   font-optical-sizing: auto;
   font-weight: 300;
+  font-weight: 700;
   font-style: normal;
-  font-size: 2.5rem;
+  font-size: 5rem;
 }
 span {
-  font-family: "Amatic SC", sans-serif;
   font-family: "Cormorant Infant", serif;
+  font-family: "Poiret One", sans-serif;
   font-weight: 400;
+  font-weight: 700;
   font-style: normal;
-  font-size: 2.5rem;
-  font-size: 1.75rem;
+  font-size: 1.9rem;
 }
 .divided {
   display: flex;
@@ -101,31 +106,93 @@ span {
 .divided span {
   width: fit-content;
   display: block;
-  padding: 0 30px;
+  font-size: 1.75rem;
 }
 .divided span:first-child {
   border-right: 1px solid #FFF;
   text-align: right;
+  padding-right: 30px;
+}
+.divided span:last-child {
+  text-align: left;
+  padding-left: 30px;
+}
+
+@media screen and (max-width: 1400px) {
+  .inner-line {
+    max-height: 85%;
+    max-width: 85%;
+  }
+  /*
+  h1 {
+    font-size: 8rem;
+  }
+  h2 {
+    font-size: 5rem;
+  }
+  p {
+    font-size: 4rem;
+  }
+  span {
+    font-size: 2rem;
+  }
+  */
 }
 
 @media screen and (max-width: 1000px) {
-  .title {
-    margin: 50px 0 0;
+  .inner-line {
+    max-height: 90%;
+    max-width: 90%;
+  }
+  .divided span:first-child {
+    padding-right: 15px;
+  }
+  .divided span:last-child {
+    padding-left: 15px;
   }
   h1 {
-    font-size: 4.5rem;
-    line-height: 5rem;
+    font-size: 8rem;
+  }
+  h2 {
+    font-size: 4rem;
   }
   p {
-    font-size: 1.5rem;
+    font-size: 4rem;
   }
-  span {
-    font-size: 1.25rem;
+}
+
+@media screen and (max-width: 767px) {
+  .inner-line {
+    max-height: 90%;
+    max-width: 90%;
+  }
+  .divided span:first-child {
+    padding-right: 0;
+    border: unset;
+    padding-bottom: 30px;
     text-align: center;
   }
-  .text {
-    margin: 50px 10px;
-    width: auto;
+  .divided span:last-child {
+    border-top: 1px solid #FFF;
+    padding-left: 0;
+    padding-top: 30px;
+    text-align: center;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 3.5rem;
+  }
+  span {
+    font-size: 1.75rem;
+  }
+  .divided {
+    flex-flow: column;
+    align-items: center;
   }
 }
 
@@ -145,7 +212,7 @@ span {
       </span>
     </div>
     <div class="subtext">
-      <h2>06.09.2025</h2>
+      <h2>6 сентября 2025</h2>
     </div>
     <div class="subtext">
       <div class="divided">
@@ -155,21 +222,16 @@ span {
           г.Шуя, ул. Мартирия Соловьёва, 16<br>
         </span>
         <span>
-          Праздничный ужин в 18:00<br>
+          Праздничный ужин в 17:00<br>
           Ресторан "Крепость"<br>
           г.Шуя, ул. Кооперативная, 2Б<br>
         </span>
       </div>
     </div>
     <div class="title">
-      <h1>Илья&nbsp;и&nbsp;Анна</h1>
+      <h1>Илья&nbsp;+&nbsp;Анна</h1>
     </div>
-  
   </div>
 </div>
 </body>
 </html>
-<noscript>
-  let name = window.$_GET = location.search.substr(1).split("&").reduce((o,i)=>(u=decodeURIComponent,[k,v]=i.split("="),o[u(k)]=v&&u(v),o),{});
-  document.getElementById('who').innerHTML = "Дорогие "+name.invite;
-</noscript>
